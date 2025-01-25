@@ -58,4 +58,67 @@ fun main() {
             break
         }
     }
+
+    println()
+
+    var fruits = arrayOf("Apple", "Banana", "Orange")
+    var emptyArray = emptyArray<Int>() // We can use emptyArray to create an empty array instead of arrayOf(size)
+
+    for (fruit in fruits){
+        println(fruit)
+    }
+
+    for (i in 0..<9){ // 0 to 8 skipping 9
+        print(i)
+    }
+
+    println()
+
+    fun add(a: Int, b: Int): Int {
+        return a + b
+    }
+
+    println(add(2, 3))
+
+    println("-------------------------------")
+
+    var array = emptyArray<String>()
+
+    fun readArray(array: Array<String>){
+        for (item in array){
+            print("$item ")
+        }
+        println()
+    }
+
+    fun addToArray(array: Array<String>, item: String): Array<String>{
+        return array.plus(item)
+    }
+
+    fun updateArray(array: Array<String>, index: Int, item: String): Array<String>{
+        if (index < array.size){
+            array[index] = item
+        }
+        return array
+    }
+
+    fun removeItem(array: Array<String>, index: Int): Array<String>{
+        return array.drop(index).toTypedArray()
+    }
+
+    array = addToArray(array, "Apple")
+    array = addToArray(array, "Banana")
+    array = addToArray(array, "Orange")
+
+    readArray(array)
+
+    array = updateArray(array, 1, "Pineapple")
+
+    readArray(array)
+
+    array = removeItem(array, 1)
+
+    readArray(array)
+
+    println("-------------------------------")
 }
