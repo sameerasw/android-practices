@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "week002xml"
 include(":app")
+include(":app")
  

@@ -6,4 +6,6 @@
     </style>
 
     <style name="Theme.Week002xml" parent="Base.Theme.Week002xml" />
+
+    <style name="Theme.Week002jetpack" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>
