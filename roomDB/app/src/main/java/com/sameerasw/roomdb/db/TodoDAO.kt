@@ -15,4 +15,7 @@ interface TodoDAO {
 
     @Query("DELETE FROM Todo WHERE id = :id")
     fun deleteTodoItem(id: Int) // the id declared above should be the same or otherwise it will fail
+
+    @Query("UPDATE Todo SET isDone = :isDone WHERE id = :id")
+    fun updateTodoItem(id: Int, isDone: Boolean)
 }

@@ -10,4 +10,5 @@ data class Todo(
      var id: Int = 0,
      var title: String,
      var createdAt: Date,
+     var isDone: Boolean = false
 )
